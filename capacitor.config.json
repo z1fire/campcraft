@@ -1,0 +1,8 @@
+{
+  "appId": "com.z1fire.campcraft",
+  "appName": "CampCraft",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#1b2a3a"
+  }
+}

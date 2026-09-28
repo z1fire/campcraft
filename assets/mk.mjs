@@ -1,0 +1,10 @@
+import sharp from 'sharp';
+const fg = await sharp('assets/fg.svg').resize(1024,1024).png().toBuffer();
+const bg = await sharp('assets/bg.svg').resize(1024,1024).png().toBuffer();
+await sharp(fg).toFile('assets/icon-foreground.png');
+await sharp(bg).toFile('assets/icon-background.png');
+await sharp(bg).composite([{input: fg}]).toFile('assets/icon-only.png');
+const small = await sharp(fg).resize(900,900).png().toBuffer();
+const bgw = await sharp('assets/bg.svg').resize(2732,2732).png().toBuffer();
+await sharp(bgw).composite([{input: small}]).toFile('assets/splash.png');
+await sharp(bgw).composite([{input: small}]).toFile('assets/splash-dark.png');

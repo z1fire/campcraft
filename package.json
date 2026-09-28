@@ -1,0 +1,19 @@
+{
+  "name": "campcraft",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CampCraft: Wilderness Adventure - an educational camping simulator",
+  "scripts": {
+    "serve": "npx http-server www -p 8080 -c-1",
+    "sync": "npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/core": "^8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.5.2"
+  }
+}
